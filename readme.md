@@ -1,6 +1,6 @@
 ## Simple JavaScript game
 
-### demo [here]()
+### demo [here](https://raaul007.github.io/game-paper-rock-scissors/)
 
 ## Tech stack:
 
