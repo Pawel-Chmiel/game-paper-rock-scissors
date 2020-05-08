@@ -29,7 +29,6 @@ function aiChoice() {
 
 // Funkcja zwracajająca informacje o wyniku gry
 function checkResult(player, ai) {
-    // console.log(player, ai);
     if (player === ai) {
         return 'draw';
     } else if ((player === "paper" && ai === "rock") || (player === "rock" && ai === "scissors") || (player === "scissors" && ai === "rock")) {
@@ -50,7 +49,7 @@ function publishResult(player, ai, result) {
 
     if (result === "win") {
         document.querySelector('p.wins span').textContent = ++gameSummary.wins;
-        document.querySelector('[data-summary="who-win"]').textContent = "Ty wygrałeś!!!!"
+        document.querySelector('[data-summary="who-win"]').textContent = "Ty wygrałeś!!!"
         document.querySelector('[data-summary="who-win"]').style.color = "green";
     } else if (result === "loss") {
         document.querySelector('p.losses span').textContent = ++gameSummary.losses;
@@ -71,7 +70,7 @@ function endGame() {
 //funkcja sterująca
 function startGame() {
     if (!game.playerHand) {
-        return alert("wybierz dłoń!!!!");
+        return alert("wybierz dłoń!!!");
     }
     game.aiHand = aiChoice();
     const gameResult = checkResult(game.playerHand, game.aiHand);
